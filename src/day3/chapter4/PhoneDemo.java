@@ -1,6 +1,5 @@
 package day3.chapter4;
 
-
 public class PhoneDemo {
   public static void main(String[] args) {
     Phone p1;
