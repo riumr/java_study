@@ -34,3 +34,23 @@
 
 ```
 </details>
+
+### 240307
+
+<details>
+<summary>Java 변수에는 할당값이 정해져있다.</summary>
+
+```
+
+```
+</details>
+
+### 240308
+
+<details>
+<summary>Java 변수에는 할당값이 정해져있다.</summary>
+
+```
+
+```
+</details>
