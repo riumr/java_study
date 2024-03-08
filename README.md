@@ -4,9 +4,9 @@
 <details>
 <summary>Java 변수 Type의 종류와 성질</summary>
 
-```
+- Type 크기에 맞는 literal을 넣어줘야 한다
+- literal의 크기가 더 큰 경우에는 형변환을 해야 오류가 발생하지 않는다.
 
-```
 </details>
 
 ### 240306
