@@ -130,7 +130,7 @@
 ### 240311
 
 <details>
-<summary>singleton 객체</summary>
+<summary>singleton 객체 : 중요</summary>
 
 ```
 
