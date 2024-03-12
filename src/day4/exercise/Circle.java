@@ -21,7 +21,7 @@ public class Circle {
   }
 
   // 생성자
-  Circle(int radius,String color){
+  public Circle(int radius, String color){
     this.radius=radius;
     this.color=color;
     System.out.println(color+"의 크기가 "+radius+"인 circle이 "+ ++numberOfCircles+"개 생성되었습니다.");
