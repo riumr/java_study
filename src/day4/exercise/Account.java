@@ -8,11 +8,11 @@ public class Account {
   private String accountPassword; // 숫자 4자리
 
   // 입금, 출금, 잔고조회, 이체
-  void deposit(long amount){
+  public void deposit(long amount){
     balance+=amount;
   }
 
-  void withdraw(long amount){
+  public void withdraw(long amount){
     if (amount > balance){
       System.out.println("출금오류");
     } else {
@@ -43,7 +43,7 @@ public class Account {
     this.accountPassword = accountPassword;
   }
 
-  void checkBalance(){
+  public void checkBalance(){
     System.out.println("현재 계좌의 잔액은 "+getBalance());
   }
 
