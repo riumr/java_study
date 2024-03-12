@@ -12,7 +12,7 @@
 ### 240306
 
 <details>
-<summary>Java 변수 type 형 변환</summary>
+<summary>변수 type 변환</summary>
 
 ```
 
@@ -20,7 +20,7 @@
 </details>
 
 <details>
-<summary>증감, 산술, 논리, 삼항 연산자</summary>
+<summary>증감, 산술, 비교, 논리, 삼항 연산자</summary>
 
 ```
 
@@ -28,7 +28,15 @@
 </details>
 
 <details>
-<summary>Java 변수에는 할당값이 정해져있다.</summary>
+<summary>키보드 입력값 받기</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>반복문, 조건문</summary>
 
 ```
 
@@ -38,17 +46,117 @@
 ### 240307
 
 <details>
-<summary>Java 변수에는 할당값이 정해져있다.</summary>
+<summary>switch 조건문</summary>
 
 ```
 
 ```
 </details>
 
+<details>
+<summary>메소드의 선언과 호출, 값 반환</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>메소드 오버로딩, 참조</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>class 이해. instance 생성 및 조작</summary>
+
+```javascript
+// 객체 속성 및 메서드 설정
+
+// 상속 : extends
+
+// 캡슐화(은닉) : private
+
+// 다형성 : @override (annotation)
+
+```
+
+</details>
+
 ### 240308
 
 <details>
-<summary>Java 변수에는 할당값이 정해져있다.</summary>
+<summary>switch 조건문</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>메소드의 선언과 호출, 값 반환</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>메소드 오버로딩, 참조</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>class 이해. instance 생성 및 조작</summary>
+
+```javascript
+// 객체 속성 및 메서드 설정
+
+// 상속 : extends
+
+// 캡슐화(은닉) : private
+
+// 다형성 : @override (annotation)
+
+```
+
+</details>
+
+### 240311
+
+<details>
+<summary>singleton 객체</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>배열(Array)</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>String 메서드</summary>
+
+```
+
+```
+</details>
+
+### 240312
+
+<details>
+<summary></summary>
 
 ```
 
