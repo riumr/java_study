@@ -156,9 +156,37 @@
 ### 240312
 
 <details>
-<summary></summary>
+<summary>객체로 구성된 배열</summary>
 
 ```
 
+```
+
+</details>
+
+<details>
+<summary>가변개수 매개변수</summary>
+
+```
+
+```
+
+</details>
+
+### 240313
+
+<details>
+<summary>객체 상속</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>다형성</summary>
+
+```
+부모 생성자를 매겨변수로 가지는 메서드에서 사용될 수 있다
 ```
 </details>
