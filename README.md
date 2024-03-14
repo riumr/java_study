@@ -88,7 +88,7 @@
 ### 240308
 
 <details>
-<summary>switch 조건문</summary>
+<summary>class의 구성요소</summary>
 
 ```
 
@@ -96,33 +96,26 @@
 </details>
 
 <details>
-<summary>메소드의 선언과 호출, 값 반환</summary>
+<summary> instance 변수와 static 변수와 비교</summary>
 
 ```
-
-```
-</details>
-
-<details>
-<summary>메소드 오버로딩, 참조</summary>
-
-```
-
+인스턴스 변수는 heap 영역에 저장되며, garbage collection의 대상이 된다.
 ```
 </details>
 
 <details>
-<summary>class 이해. instance 생성 및 조작</summary>
+<summary>접근자, 설정자</summary>
 
-```javascript
-// 객체 속성 및 메서드 설정
+```
+`private` 으로 캡슐화된 변수를 외부에서 사용할 때는 값을 
+반환하는 접근자(getter)와 값을 변경하도록 하는 설정자(setter)가 필요하다
+```
+</details>
 
-// 상속 : extends
+<details>
+<summary>this를 통한 자기참조</summary>
 
-// 캡슐화(은닉) : private
-
-// 다형성 : @override (annotation)
-
+```
 ```
 
 </details>
