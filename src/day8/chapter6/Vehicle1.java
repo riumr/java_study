@@ -13,7 +13,7 @@ public class Vehicle1 {
     this.speed = speed;
   }
 
-  public Vehicle1(){
+  public Vehicle1() {
 
   }
 
