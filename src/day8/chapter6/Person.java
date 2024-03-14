@@ -1,8 +1,8 @@
 package day8.chapter6;
 
 public class Person {
-  String name;
-  int age;
+  private String name;
+  private int age;
 
   public String getName() {
     return name;
@@ -20,8 +20,8 @@ public class Person {
     this.age = age;
   }
 
-  void show(){
-    System.out.println("이름 : "+name+" 나이 : "+age);
+  String show(){
+    return "이름 : "+name+" 나이 : "+age;
   }
 
   public Person(String name,int age){
