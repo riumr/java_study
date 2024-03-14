@@ -6,7 +6,7 @@ public class Car1 extends Vehicle1 {
 
   @Override
   void show() {
-    System.out.println(color + " 자동차이고" + " 속도는 " + speed + " 출발은 " + displacement + " 가스는 " + gars + "만큼 들어있습니다");
+    System.out.println(color + " 자동차이고" + " 속도는 " + speed + " 배기량은 " + displacement + " 가스는 " + gars + "만큼 들어있습니다");
   }
 
   public Car1(String color, int speed, int displacement, int gars) {

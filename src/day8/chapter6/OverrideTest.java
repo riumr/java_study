@@ -7,6 +7,6 @@ public class OverrideTest {
 
     System.out.println();
     Vehicle1 v = c;
-    v.show(); // overriding 된 메서드의 다형성 관계 확인
+    v.show(); // overriding 된 메서드로 만든 객체는 overcasting 된 객체에서도 호출 가능
   }
 }
