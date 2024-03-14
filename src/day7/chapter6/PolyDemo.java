@@ -11,6 +11,7 @@ public class PolyDemo {
     check(s);
     check(p);
     check(e);
+
     Person person = new Person();
 
     Person[] people = new Person[3];
