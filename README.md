@@ -190,3 +190,48 @@
 부모 생성자를 매겨변수로 가지는 메서드에서 사용될 수 있다
 ```
 </details>
+
+
+### 240314
+
+<details>
+<summary>upcasting 된 객체 배열에 담기</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>Instanceof 연산자 활용. Type 검증</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>부모 객체형으로 upcasting 된 자식요소만 downcasting 가능</summary>
+
+```
+
+```
+</details>
+
+<details>
+<summary>Interface 기본</summary>
+
+```
+interface의 추상 메소드를 override 해야한다.
+```
+</details>
+
+### 240315
+
+<details>
+<summary>추상 클래스</summary>
+
+```
+
+```
+</details>
