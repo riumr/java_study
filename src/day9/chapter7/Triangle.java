@@ -3,21 +3,23 @@ package day9.chapter7;
 // Comparable 인터페이스 구현 문제. toString 메소드도 사용
 public class Triangle implements Comparable {
   int width, height;
-  double space;
+  float space;
 
   public Triangle(int width, int height) {
     this.width = width;
     this.height = height;
-    this.space = (double)width*height/2;
   }
 
+  float space(){
+    return space=(float)width*height/2;
+  }
 
   @Override
   public int compareTo(Object o) {
     if (o instanceof Triangle t) {
-      if (this.space > t.space) {
+      if (this.space() > t.space()) {
         return 1;
-      } else if (this.space == t.space) {
+      } else if (this.space() == t.space()) {
         return 0;
       } else {
         return -1;
