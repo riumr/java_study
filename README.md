@@ -228,3 +228,52 @@ interface의 추상 메소드를 override 해야한다.
 
 ```
 </details>
+
+<details>
+<summary>인터페이스로 upcasting</summary>
+
+```
+
+```
+</details>
+
+### 240318
+
+<details>
+<summary>Java.lang 패키지</summary>
+
+`Object 클래스`
+
+`Class`
+
+`System`
+
+`StringBuilder`
+
+`Wrapper 포장클래스`
+```markdown
+Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기능을 해준다.
+이를 사용해 단순한 변수 타입의 객체도 Java 기본 패키지를 사용할 수 있다.
+```
+
+`Calendar`
+
+`Arrays`
+
+`Random`
+
+`MessageFormat`
+
+`StringTokenizer`
+
+</details>
+
+<details>
+<summary>Generic 타입 객체 ArrayList<></summary>
+
+</details>
+
+<details>
+<summary>Garbase collector 수동 호출</summary>
+
+</details>
