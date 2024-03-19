@@ -5,15 +5,15 @@ public class GenericClassDemo1 {
   public static void main(String[] args) {
     Cup c = new Cup();
 
-    c.setBeverage(new Beer());
+    c.setBeverage(new day10.chapter8.generic.Beer());
     Object beverage = c.getBeverage();
-    if(beverage instanceof Beer){
-      Beer b = (Beer)beverage;
+    if(beverage instanceof day10.chapter8.generic.Beer){
+      day10.chapter8.generic.Beer b = (day10.chapter8.generic.Beer)beverage;
     }
-    c.setBeverage(new Boricha());
+    c.setBeverage(new day10.chapter8.generic.Boricha());
     Object beverage1 = c.getBeverage();
-    if(beverage1 instanceof Beer){
-      Boricha br = (Boricha) beverage1;
+    if(beverage1 instanceof day10.chapter8.generic.Beer){
+      day10.chapter8.generic.Boricha br = (day10.chapter8.generic.Boricha) beverage1;
     }
   }
 }
@@ -22,11 +22,11 @@ class Beverage {
 
 }
 
-class Beer extends Beverage {
+class Beer extends day10.chapter8.generic.Beverage {
 
 }
 
-class Boricha extends Beverage {
+class Boricha extends day10.chapter8.generic.Beverage {
 
 }
 
