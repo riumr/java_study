@@ -1,6 +1,6 @@
 package day11.chapter10;
 
-// lambda 식은 Myfunction 인터페이스를 구현한 익명객체의 method를 overridng하는 원리로 만들어진다.
+// lambda 식은 인터페이스를 구현한 익명객체의 method를 overridng하는 원리로 만들어진다.
 public class LambdaDemo {
   public static void main(String[] args) {
 //    Object obj = new Object(){
