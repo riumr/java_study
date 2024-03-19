@@ -277,3 +277,26 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 <summary>Garbase collector 수동 호출</summary>
 
 </details>
+
+### 240319
+
+<details>
+<summary>예외처리</summary>
+
+</details>
+
+<details>
+<summary>Generic type 클래스</summary>
+
+</details>
+
+<details>
+<summary>함수형 interface 사용</summary>
+
+</details>
+
+<details>
+<summary>참조</summary>
+
+</details>
+
