@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-// 람다식을 사용한 메소드 overriding
+// lambda식으로 함수형 interface 메소드 사용
 public class lambdaDemo2 {
   public static void main(String[] args) {
     List<Integer> list = Arrays.asList(5,3,2,9);
