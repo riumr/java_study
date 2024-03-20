@@ -24,7 +24,7 @@ public class LinkedListDemo {
     long endTime = System.nanoTime();
     long duration = endTime-startTime;
     System.out.println("LinkedList : "+duration);
-    
+
     // ArrayList
     ArrayList<Integer> a1 = new ArrayList<>();
     startTime = System.nanoTime();

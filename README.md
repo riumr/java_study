@@ -300,3 +300,44 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 
 </details>
 
+### 240320
+
+<details>
+<summary>LinkedList 클래스</summary>
+
+</details>
+
+<details>
+<summary>List collection</summary>
+
+</details>
+
+<details>
+<summary>Set collection</summary>
+
+</details>
+
+<details>
+<summary>Stack 클래스</summary>
+
+</details>
+
+<details>
+<summary>queue 컬렉션</summary>
+
+</details>
+
+<details>
+<summary>Map 인터페이스</summary>
+
+</details>
+
+<details>
+<summary>HashMap 클래스</summary>
+
+</details>
+
+<details>
+<summary>Collections 클래스 정적 메소드</summary>
+
+</details>
