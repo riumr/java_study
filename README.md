@@ -274,7 +274,7 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 </details>
 
 <details>
-<summary>Garbase collector 수동 호출</summary>
+<summary>Garbage collector 수동 호출</summary>
 
 </details>
 
