@@ -4,6 +4,7 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.Scanner;
 
+// Hashmap과 동일한 기능을 제공하지만 스레드에 안전하다
 public class HashTableDemo {
   public static void main(String[] args) {
     Map<String,Integer> map = new Hashtable<>();
