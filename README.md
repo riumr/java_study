@@ -341,3 +341,62 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 <summary>Collections 클래스 정적 메소드</summary>
 
 </details>
+
+### 240321
+
+<details>
+<summary>Stream</summary>
+
+Stream<T> = Stream.of(배열)
+
+느긋한 연산. 요소를 요구하기 전까지 작업하지 않는다
+</details>
+
+<details>
+<summary>stream과 collections 사용 방식 비교</summary>
+
+</details>
+
+<details>
+<summary>Stream 정렬</summary>
+
+</details>
+
+<details>
+<summary>Stream 매핑</summary>
+
+</details>
+
+<details>
+<summary>Stream 매칭과 검색</summary>
+
+</details>
+
+<details>
+<summary>Stream 단순집계</summary>
+
+</details>
+
+<details>
+<summary>Stream filtering, Collector</summary>
+
+</details>
+
+<details>
+<summary>Stream Grouping, partitioning</summary>
+
+</details>
+
+<details>
+<summary>Optional 타입</summary>
+
+</details>
+
+<details>
+<summary>Array 직접 구현하기</summary>
+
+- 배열의 원리 : overflow가 발생하면 배열의 크기를 2배 증가시킨다.
+- 배열이 1/4 남아있다면 크기를 1/2로 줄인다.
+</details>
+
+
