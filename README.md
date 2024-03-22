@@ -353,7 +353,7 @@ Stream<T> = Stream.of(배열)
 </details>
 
 <details>
-<summary>stream과 collections 사용 방식 비교</summary>
+<summary>Stream과 collections 사용 방식 비교</summary>
 
 </details>
 
@@ -397,6 +397,30 @@ Stream<T> = Stream.of(배열)
 
 - 배열의 원리 : overflow가 발생하면 배열의 크기를 2배 증가시킨다.
 - 배열이 1/4 남아있다면 크기를 1/2로 줄인다.
+</details>
+
+### 240322
+
+<details>
+<summary>단순 연결 리스트 구현</summary>
+
+- 노드로 구성됐다. 빈 공간이 존재하지 않음
+- 자료 추가 삭제 : O(1). 자료 탐색 : O(N)
+
+</details>
+
+<details>
+<summary>Queue 구현</summary>
+
+- 자료 추가, 삭제 : O(1)
+
+</details>
+
+<details>
+<summary>Stack 구현</summary>
+
+- top에 넣고, top에서 제거한다.
+
 </details>
 
 
