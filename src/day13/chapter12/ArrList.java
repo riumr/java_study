@@ -23,7 +23,7 @@ public class ArrList<E> {
     return a[Index];
   }
 
-  public E removeLast() {
+  public E removeLast() { // 요소 삭제에 시간이 많이 걸린다(O(n))
     if (size == a.length/4){
       resize(a.length/2); // 1/2로 줄인다
     }
