@@ -11,7 +11,7 @@ public class DBConnectionDemo {
     makeConnection();
   }
 
-  private static Connection makeConnection() {
+  public static Connection makeConnection() {
     String url = "jdbc:mysql://localhost/mydata?serverTimezone=Asia/Seoul";
     Connection connect = null;
     try {
