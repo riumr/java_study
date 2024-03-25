@@ -423,4 +423,49 @@ Stream<T> = Stream.of(배열)
 
 </details>
 
+### 240325
+
+<details>
+<summary>read(), write() 메소드로 입력 및 출력</summary>
+
+- 
+
+</details>
+
+<details>
+<summary>FileStream 클래스. 모든 파일을 읽고 쓸 수 있음</summary>
+
+</details>
+
+<details>
+<summary>Thread 상속</summary>
+
+</details>
+
+<details>
+<summary>Socket 클래스로 Client, server 구현</summary>
+
+</details>
+
+<details>
+<summary>Mysql DB에 연결</summary>
+
+```java
+Class.forName("com.mysql.cj.jdbc.Driver");
+connect = DriverManager.getConnection(url, "root", "password");
+```
+
+</details>
+
+<details>
+<summary>Mysql DB에 값 추가(insert into)</summary>
+
+</details>
+
+<details>
+<summary>Mysql DB 가져오기(select)</summary>
+
+- 
+
+</details>
 
