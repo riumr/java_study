@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class RestaurantDAO {
+public class RestaurantsDAO {
   public static void updateRestaurant(Connection con, int id, String name) throws SQLException {
     System.out.println("식당 정보를 수정합니다.");
     String sql = "update restaurants set name= ? where id= ?;";
