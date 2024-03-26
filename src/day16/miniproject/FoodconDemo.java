@@ -65,13 +65,13 @@ public class FoodconDemo {
     if (subMenu == 1) {
       System.out.println("추가할 식당의 이름을 입력하세요");
       String name = in.nextLine();
-      RestaurantDAO.insertRestaurant(con, name);
+      RestaurantsDAO.insertRestaurant(con, name);
     } else if (subMenu == 2) {
       System.out.println("수정할 식당의 id와 수정할 이름을 입력하세요");
       int id = in.nextInt();
       in.nextLine();
       String name = in.nextLine();
-      RestaurantDAO.updateRestaurant(con, id, name);
+      RestaurantsDAO.updateRestaurant(con, id, name);
     }
   }
 
