@@ -78,16 +78,17 @@ public class FoodconDemo {
   private static void payment(Scanner in, Connection con) throws SQLException {
     System.out.println("가게 Id");
     int resId = in.nextInt();
+    Restaurants restaurants = RestaurantsDAO.getRestaurant(con,resId);
     in.nextLine();
     System.out.println("학생 Id");
     int studentId = in.nextInt();
+    Students students = StudentDAO.getStudent(con,studentId);
     in.nextLine();
     System.out.println("금액");
     int amount = in.nextInt();
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     String date = formatter.format(new Date());
     in.nextLine();
-    PaymentDAO.pay(con,resId,studentId,amount,date);
+    PaymentDAO.pay(con,restaurants,students,amount,date);
   }
-
 }
