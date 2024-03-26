@@ -20,7 +20,7 @@ public class FoodconDemo {
       System.out.println("학생 추가/수정 작업을 하겠습니다.");
       studentManage(in, con);
     } else if (menu == 3) {
-      System.out.println("결제할 금액을 입력해주세요.");
+      System.out.println("결제 정보를 입력해주세요.");
       payment(in, con);
     }
   }
@@ -76,12 +76,18 @@ public class FoodconDemo {
   }
 
   private static void payment(Scanner in, Connection con) throws SQLException {
-    System.out.println("결제 금액을 입력해주세요");
+    System.out.println("가게 Id");
+    int resId = in.nextInt();
+    in.nextLine();
+    System.out.println("학생 Id");
+    int studentId = in.nextInt();
+    in.nextLine();
+    System.out.println("금액");
     int amount = in.nextInt();
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     String date = formatter.format(new Date());
     in.nextLine();
-    PaymentDAO.pay(con, amount,date);
+    PaymentDAO.pay(con,resId,studentId,amount,date);
   }
 
 }

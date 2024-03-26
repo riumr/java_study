@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 
 public class PaymentDAO {
-  public static void pay(Connection con, int amount,String date) throws SQLException {
+  public static void pay(Connection con,int resID,int studentId, int amount,String date) throws SQLException {
     System.out.println("해당금액을 결제하겠습니다");
     String sql = "insert into payments (resId, studentId, date, amount) values (?,?,?,?);";
     PreparedStatement statement = con.prepareStatement(sql);
-    statement.setInt(1,1);
-    statement.setInt(2,1);
+    statement.setInt(1,resID);
+    statement.setInt(2,studentId);
     statement.setDate(3,java.sql.Date.valueOf(date));
     statement.setInt(4,amount);
     if(statement.executeUpdate()==1){
