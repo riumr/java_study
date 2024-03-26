@@ -2,6 +2,7 @@ package day16.miniproject;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class StudentDAO {
@@ -51,5 +52,24 @@ public class StudentDAO {
     }
     statement.close();
     con.close();
+  }
+
+  public static Students getStudent(Connection con,int id) throws SQLException {
+    String sql = "select * from students where id = ?;";
+    PreparedStatement statement = con.prepareStatement(sql);
+    statement.setInt(1,id);
+    ResultSet resultSet = statement.executeQuery(sql);
+    String name = resultSet.getString(3);
+    String date = resultSet.getString(2);
+    int amount = resultSet.getInt(4);
+    if(resultSet!=null && resultSet.next()){
+      if (resultSet.getInt(1)==id){
+       return new Students(id,date,name,amount);
+      } else{
+        return null;
+      }
+    } else {
+      return null;
+    }
   }
 }
