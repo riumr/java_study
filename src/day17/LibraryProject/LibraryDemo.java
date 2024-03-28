@@ -79,17 +79,22 @@ public class LibraryDemo {
 
     // 도서 정보 수정
     if (menu == 3) {
-//      Book book = new Book();
-//      String status="fine";
-//      bookDAO.bookUpdate(book,status);
+      System.out.println("정보를 변경할 도서 정보의 id를 입력해주세요");
+      int id = in.nextInt();
+      Book book = new Book(id, 0, "", "", "", "", "", "", "");
+      String status = "checkout";
+      bookDAO.bookUpdate(book, status);
     }
 
     // 도서 정보 삭제
     if (menu == 4) {
       System.out.println("삭제할 도서 정보의 id를 입력해주세요");
       int id = in.nextInt();
-      Book book = new Book(id,0,"","","","","","","");
-      bookDAO.bookDelete(book);
+      Book book = new Book(id, 0, "", "", "", "", "", "", "");
+      boolean bookChecking = bookDAO.bookCheck(book);
+      if (bookChecking) {
+        bookDAO.bookDelete(book);
+      }
     }
   }
 
