@@ -32,9 +32,10 @@ public class BookDAO {
     ps.setString(1, "%"+bookname+"%");
     ResultSet rs = ps.executeQuery();
     List<Book> bookList = new LinkedList<>();
+    Book book;
     if (rs != null) {
       while (rs.next()) {
-        Book book = new Book(rs.getInt(1), rs.getInt(2), rs.getString(3),
+        book = new Book(rs.getInt(1), rs.getInt(2), rs.getString(3),
             rs.getString(4), rs.getString(5), "", "", "", "");
         bookList.add(book);
       }
@@ -104,11 +105,30 @@ public class BookDAO {
     con.close();
   }
 
-  public void bookUpdate(Book book, String status) {
+  public void bookUpdate(Book book, String status) throws SQLException {
+    Connection con = LibraryDBConnection.getConnection();
+    String sql = "update books set status=? where id=?;";
+    PreparedStatement ps = con.prepareStatement(sql);
+    ps.setString(1,status);
+    ps.setInt(2,book.getId());
+    int success = ps.executeUpdate();
+    if (success==1){
+      System.out.println("도서 상태 수정 성공");
+    } else {
+      System.out.println("도서 상태 수정 실패");
+    }
   }
 
-  public boolean bookCheck(Book book) {
-    return false;
+  public boolean bookCheck(Book book) throws SQLException {
+    Connection con = LibraryDBConnection.getConnection();
+    String sql = "select from books where id=?;";
+    PreparedStatement ps = con.prepareStatement(sql);
+    ps.setInt(1,book.getId());
+    ResultSet rs = ps.executeQuery();
+    if(rs.getString(9).equals("checkout")){
+      return false;
+    }
+    return true;
   }
 
   public void bookDelete(Book book) throws SQLException {
