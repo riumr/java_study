@@ -31,6 +31,7 @@ public class LibraryDemo {
       searchMenu = in.nextInt();
       in.nextLine();
     }
+
     // 도서명으로 검색
     if (searchMenu == 1) {
       String name = in.nextLine();
@@ -74,7 +75,11 @@ public class LibraryDemo {
       System.out.print("isbn : ");
       String isbn = in.nextLine();
       Book book = new Book(id, libraryId, bookName, writerNameAdd, publisherAdd, "", isbn, "", "");
-      bookDAO.bookCreate(book);
+      // isbn 중복 체크 메서드 추가 : BookDAO.isbnDuplicateCheck
+      boolean isbnCheck = bookDAO.isbnDuplicateCheck(book);
+      if (isbnCheck == false) {
+        bookDAO.bookCreate(book);
+      }
     }
 
     // 도서 정보 수정

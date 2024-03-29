@@ -144,4 +144,14 @@ public class BookDAO {
     ps.close();
     con.close();
   }
+
+  public boolean isbnDuplicateCheck(Book book) throws SQLException {
+    Connection con = LibraryDBConnection.getConnection();
+    String sql = "select * from books where isbn = ?;";
+    PreparedStatement ps = con.prepareStatement(sql);
+    ps.setString(1,book.getIsbn());
+    ResultSet rs = ps.executeQuery();
+    // query실행 값이 존재하면 false
+    return false;
+  }
 }
