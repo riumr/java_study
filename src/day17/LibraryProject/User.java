@@ -8,7 +8,7 @@ public class User {
   private String address;
   private int point;
 
-  public User(int id, int libraryId, String username, String telephone, String address, int point) {
+  public User(int id, String username, String telephone, String address, int point, int libraryId) {
     this.id = id;
     this.libraryId = libraryId;
     this.username = username;
