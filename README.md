@@ -523,8 +523,13 @@ connect = DriverManager.getConnection(url, "root", "password");
 ### 240329
 
 <details>
-<summary>유저 DAO 및 인터페이스 작성</summary>
+<summary>유저 DAO 및 유저 인터페이스 작성</summary>
 
 - 도서, 유저, 대출정보 메서드를 작성하는 과정에서 Foreign key 사용의 필요성에 대해 생각
+
+</details>
+
+<details>
+<summary>대출관리 DAO 및 유저 인터페이스 작성</summary>
 
 </details>
