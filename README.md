@@ -469,3 +469,62 @@ connect = DriverManager.getConnection(url, "root", "password");
 
 </details>
 
+### 240326
+
+<details>
+<summary>DAO 작성</summary>
+
+**음식 결제 서비스**
+- payments, restaurants, students 테이블 
+
+**진행순서**
+- DB 작성
+- jdbc-db 연결
+- java 객체생성
+- DAO 작성
+- 유저 인터페이스 작성
+
+</details>
+
+### 240327
+
+<details>
+<summary>요구 사항 도출 시</summary>
+
+- 관련 분야의 비즈니스 로직에 대한 이해가 중요하다
+- 관련 문서를 읽거나 자주 사용하는 용어를 정리하는 것도 설계에 도움이 된다.
+
+</details>
+
+<details>
+<summary>CRUD 서비스 작성</summary>
+
+**도서관리시스템**
+- books, users 테이블
+
+**진행순서**
+- DB 작성
+- jdbc-db 연결
+- java 객체생성
+- DAO 작성
+- 유저 인터페이스 작성
+
+</details>
+
+### 240328
+
+<details>
+<summary>도서 정보 수정, 삭제 메서드 수정</summary>
+
+- like Query문이 제대로 작동하지 않는 문제 발생
+
+</details>
+
+### 240329
+
+<details>
+<summary>유저 DAO 및 인터페이스 작성</summary>
+
+- 도서, 유저, 대출정보 메서드를 작성하는 과정에서 Foreign key 사용의 필요성에 대해 생각
+
+</details>
