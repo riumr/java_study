@@ -2,6 +2,20 @@
 
 ### 240305
 <details>
+<summary>Java 실행환경 구성</summary>
+
+설치
+- java 17
+- OpenJdk : oracle adoptium
+  - java가 설치되는 폴더에 설치
+- 환경변수 등록 : jdk가 설치된 폴더로
+
+intellij 설정
+- setting에서 auto import 버튼 다 누르기
+
+</details>
+
+<details>
 <summary>Java 변수 Type의 종류와 성질</summary>
 
 - Type 크기에 맞는 literal을 넣어줘야 한다
@@ -448,7 +462,17 @@ Stream<T> = Stream.of(배열)
 </details>
 
 <details>
-<summary>Mysql DB에 연결</summary>
+<summary>jdbc로 Mysql DB에 연결</summary>
+
+**과정 순서**
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
 
 ```java
 Class.forName("com.mysql.cj.jdbc.Driver");
