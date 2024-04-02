@@ -12,7 +12,11 @@
 
 intellij 설정
 - setting에서 auto import 버튼 다 누르기
-
+- setting-compiler에서 Build project automatically 체크
+- intent-java. tap 크기를 2,2,4로 변경
+- 로그 출력시 한글 깨짐 방지
+  - Help-Edit custom VM options. -Dfile.encoding=UTF-8 추가하고 저장
+- file-invalid Cahses. 제대로 import 되지 않거나 변경사항이 적용되지 않을 때
 </details>
 
 <details>
@@ -29,7 +33,11 @@ intellij 설정
 <summary>변수 type 변환</summary>
 
 ```
+char를 String으로 변환
+String s2 = '3' + "";
 
+String을 char로 변환
+char c4 = s2.charAt(0);
 ```
 </details>
 
@@ -37,7 +45,8 @@ intellij 설정
 <summary>증감, 산술, 비교, 논리, 삼항 연산자</summary>
 
 ```
-
+조건연산 (삼항연산)
+boolean b4 = (1 != 1) ? true : false;
 ```
 </details>
 
@@ -45,7 +54,7 @@ intellij 설정
 <summary>키보드 입력값 받기</summary>
 
 ```
-
+Scanner in = new Scanner(System.in);
 ```
 </details>
 
@@ -63,7 +72,22 @@ intellij 설정
 <summary>switch 조건문</summary>
 
 ```
+switch (조건) {
+  case 결과 -> {
+  ...
+} default -> {
+  ...
+}
 
+개선된 조건문
+kind = switch (animal){
+  case "호랑이" -> "포유류";
+  case "참새" -> "조류";
+  case "고등어" -> "어류";
+  default -> {
+    System.out.print("어이쿠, ");
+        yield "...";
+}
 ```
 </details>
 
@@ -71,7 +95,7 @@ intellij 설정
 <summary>메소드의 선언과 호출, 값 반환</summary>
 
 ```
-
+메소드는 매개변수를 필요로 한다
 ```
 </details>
 
@@ -79,19 +103,49 @@ intellij 설정
 <summary>메소드 오버로딩, 참조</summary>
 
 ```
-
+같은 이름의 메서드의 매개변수의 개수와 type을 다르게 한다.
 ```
 </details>
 
 <details>
 <summary>class 이해. instance 생성 및 조작</summary>
 
-```javascript
+```java
 // 객체 속성 및 메서드 설정
+public class Animal {
+  // 필드
+  int legs;
+  // 메서드
+  void eat(){
+    System.out.println("먹는다.");
+  }
+  void move(){
+    System.out.println("움직인다.");
+  }
+}
 
 // 상속 : extends
+public class Bird extends Animal {
+  @Override
+  void move() {
+    System.out.println("난다");;
+  }
+
+  @Override
+  void eat() {
+    System.out.println("벌레를 먹는다.");
+  }
+
+  // 필드
+  int legs = 2;
+  int wings = 2;
+  
+}
 
 // 캡슐화(은닉) : private
+
+
+
 
 // 다형성 : @override (annotation)
 
