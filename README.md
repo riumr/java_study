@@ -32,11 +32,11 @@ intellij 설정
 <details>
 <summary>변수 type 변환</summary>
 
-```
-char를 String으로 변환
+```java
+//char를 String으로 변환
 String s2 = '3' + "";
 
-String을 char로 변환
+//String을 char로 변환
 char c4 = s2.charAt(0);
 ```
 </details>
@@ -44,8 +44,8 @@ char c4 = s2.charAt(0);
 <details>
 <summary>증감, 산술, 비교, 논리, 삼항 연산자</summary>
 
-```
-조건연산 (삼항연산)
+```java
+//조건연산 (삼항연산)
 boolean b4 = (1 != 1) ? true : false;
 ```
 </details>
@@ -53,7 +53,7 @@ boolean b4 = (1 != 1) ? true : false;
 <details>
 <summary>키보드 입력값 받기</summary>
 
-```
+```java
 Scanner in = new Scanner(System.in);
 ```
 </details>
@@ -71,7 +71,7 @@ Scanner in = new Scanner(System.in);
 <details>
 <summary>switch 조건문</summary>
 
-```
+```java
 switch (조건) {
   case 결과 -> {
   ...
@@ -79,7 +79,7 @@ switch (조건) {
   ...
 }
 
-개선된 조건문
+//개선된 조건문
 kind = switch (animal){
   case "호랑이" -> "포유류";
   case "참새" -> "조류";
@@ -89,6 +89,7 @@ kind = switch (animal){
         yield "...";
 }
 ```
+
 </details>
 
 <details>
@@ -143,11 +144,10 @@ public class Bird extends Animal {
 }
 
 // 캡슐화(은닉) : private
-
-
-
+// singleton 패턴이 캡슐화를 사용하는 대표적인 방법이다
 
 // 다형성 : @override (annotation)
+// 하나의 객체가 여러가지 타입을 가질 수 있는 것 
 
 ```
 
@@ -159,7 +159,7 @@ public class Bird extends Animal {
 <summary>class의 구성요소</summary>
 
 ```
-
+- 멤버(필드, 메서드), 생성자
 ```
 </details>
 
@@ -184,6 +184,7 @@ public class Bird extends Animal {
 <summary>this를 통한 자기참조</summary>
 
 ```
+this로 가리키는 변수는 메서드의 변수이다.
 ```
 
 </details>
@@ -194,6 +195,8 @@ public class Bird extends Animal {
 <summary>singleton 객체 : 중요</summary>
 
 ```
+사용하는 이유 : 변수를 초기화 해놓는 것처럼 객체의 멤버들을 초기화 해놓기 위해 사용한다.
+- 메모리를 절약할 수 있다
 
 ```
 </details>
@@ -207,7 +210,7 @@ public class Bird extends Animal {
 </details>
 
 <details>
-<summary>String 메서드</summary>
+<summary>문자열 메서드</summary>
 
 ```
 
@@ -219,8 +222,8 @@ public class Bird extends Animal {
 <details>
 <summary>객체로 구성된 배열</summary>
 
-```
-
+```java
+Ball[] balls = new Ball[5];
 ```
 
 </details>
