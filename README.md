@@ -231,8 +231,12 @@ Ball[] balls = new Ball[5];
 <details>
 <summary>가변개수 매개변수</summary>
 
-```
-
+```java
+public static void sumAndPrint(int...v){
+  int sum = 0;
+  for (int i : v) {
+    sum+=i;
+  };
 ```
 
 </details>
@@ -243,7 +247,9 @@ Ball[] balls = new Ball[5];
 <summary>객체 상속</summary>
 
 ```
-
+- super()를 통해 부모의 필드값 사용 가능
+- super로 호출시 모든 필드를 정의해줘야 한다
+- 접근제한자에 따라 상속받을 수 있는 필드가 다르다.
 ```
 </details>
 
@@ -251,18 +257,27 @@ Ball[] balls = new Ball[5];
 <summary>다형성</summary>
 
 ```
-부모 생성자를 매겨변수로 가지는 메서드에서 사용될 수 있다
+- 부모 생성자를 매개변수로 가지는 메서드에 해당 객체를 매개변수로 넣기 위해 사용될 수 있다
+- 부모 생성자로 upcasting하면 부모 요소의 멤버만 사용할 수 있다.
 ```
 </details>
 
+<details>
+<summary>접근지정자 범위</summary>
+
+```
+- public > protected > default > private
+```
+
+</details>
 
 ### 240314
 
 <details>
-<summary>upcasting 된 객체 배열에 담기</summary>
+<summary>배열에 객체 담을 시 자동 upcasting</summary>
 
 ```
-
+- 자식요소를 배열에 넣는 과정에서 자동형변환된다.
 ```
 </details>
 
@@ -270,7 +285,7 @@ Ball[] balls = new Ball[5];
 <summary>Instanceof 연산자 활용. Type 검증</summary>
 
 ```
-
+- V instanceof Type v
 ```
 </details>
 
