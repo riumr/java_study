@@ -327,14 +327,21 @@ interface의 추상 메소드를 override 해야한다.
 
 <details>
 <summary>Java.lang 패키지</summary>
+** Class 별 메소드 **
 
 `Object 클래스`
+- equals(), toString()
 
 `Class`
+- getClass(), getSimpleName(), getTypeName(), getName() 
 
 `System`
+- currentTimeMills(), nanoTime(), arraycopy()
 
 `StringBuilder`
+- String 클래스와 동일하게 사용할 수 있는 클래스
+- 변경될 수 있는 문자열은 StringBuilder 클래스 사용
+- StringBuilder는 같은 주소값의 객체를 수정할 수 있도록 하기 때문이다
 
 `Wrapper 포장클래스`
 ```markdown
@@ -343,24 +350,38 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 ```
 
 `Calendar`
+- PM, MONTH, HOUR
 
 `Arrays`
+- copyOf(), binarySearch()
 
 `Random`
+- nextInt()
 
 `MessageFormat`
+- String type 값을 반환한다
 
 `StringTokenizer`
+- StringTokenizer st = new StringTokenizer(s," ,");
+- countTokens();
 
 </details>
 
 <details>
 <summary>Generic 타입 객체 ArrayList<></summary>
 
+```java
+ArrayList<Integer> ai = new ArrayList<>();
+ArrayList<String> as= new ArrayList<>();
+ArrayList<Object> ao = new ArrayList<>();
+```
+
 </details>
 
 <details>
 <summary>Garbage collector 수동 호출</summary>
+
+- System.gc();
 
 </details>
 
@@ -374,16 +395,53 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 <details>
 <summary>Generic type 클래스</summary>
 
+```java
+// 2개 이상의 매개변수를 가지는 Generic type
+public class Entry<K,V> {
+  private K key;
+  private V value;
+
+  public Entry(K key, V value) {
+    this.key = key;
+    this.value = value;
+  }
+
+  public K getKey() {
+    return key;
+  }
+
+  public void setKey(K key) {
+    this.key = key;
+  }
+
+  public V getValue() {
+    return value;
+  }
+
+  public void setValue(V value) {
+    this.value = value;
+  }
+
+}
+```
+
 </details>
 
 <details>
-<summary>함수형 interface 사용</summary>
+<summary>함수형 interface(lambda) 사용</summary>
+
+- 인터페이스를 구현한 익명객체의 method를 overridng하는 원리로 만들어진다.
 
 </details>
 
 <details>
 <summary>참조</summary>
 
+```java
+ Mathemetical m;
+// m = d->Math.abs(d);
+m = Math::abs;
+```
 </details>
 
 ### 240320
@@ -391,40 +449,73 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 <details>
 <summary>LinkedList 클래스</summary>
 
+```java
+LinkedList<Integer> l1 = new LinkedList<>();
+```
+
 </details>
 
 <details>
 <summary>List collection</summary>
+
+```java
+
+```
 
 </details>
 
 <details>
 <summary>Set collection</summary>
 
+```java
+Set<String> set = Set.of("a","b","c");
+HashSet<String> hashSet = new HashSet<>(set);
+TreeSet<String> treeSet = new TreeSet<>(set);
+```
+
 </details>
 
 <details>
 <summary>Stack 클래스</summary>
+
+```java
+Stack<Integer> i1 = new Stack<>();
+```
 
 </details>
 
 <details>
 <summary>queue 컬렉션</summary>
 
+```java
+Queue<String> q = new LinkedList<>();
+```
+
 </details>
 
 <details>
 <summary>Map 인터페이스</summary>
+
+```java
+Map<String,Integer> fruits = Map.of("사과",5,"바나나",3,"딸기",2);
+```
 
 </details>
 
 <details>
 <summary>HashMap 클래스</summary>
 
+```java
+// HashMap 클래스
+HashMap<String,Integer> hashMap = new HashMap<>(fruits);
+```
+
 </details>
 
 <details>
-<summary>Collections 클래스 정적 메소드</summary>
+<summary>Collections 클래스 메소드</summary>
+
+- sort(), reverse(), shuffle()
 
 </details>
 
@@ -433,48 +524,112 @@ Integer, String, Double 등이 있으며, 기초 변수 타입과 동일한 기�
 <details>
 <summary>Stream</summary>
 
-Stream<T> = Stream.of(배열)
+- Stream<T> = Stream.of(배열)
+- 느긋한 연산. 요소를 요구하기 전까지 작업하지 않는다
 
-느긋한 연산. 요소를 요구하기 전까지 작업하지 않는다
 </details>
 
 <details>
 <summary>Stream과 collections 사용 방식 비교</summary>
+
+```java
+// collections
+List<Integer> gt10 = new ArrayList<>();
+for (Integer i : list) {
+  if (i > 10) {
+    gt10.add(i);
+  }
+}
+Collections.sort(gt10);
+System.out.println(gt10);
+
+// stream
+list.stream().filter(i -> i > 10).sorted().forEach(x -> System.out.print(x + " "));
+```
 
 </details>
 
 <details>
 <summary>Stream 정렬</summary>
 
+```java
+Stream<Nation> n1 = Nation.nations.stream();
+Stream<Nation> sorted = n1.sorted(Comparator.comparing(Nation::getGdpRank));
+```
+
 </details>
 
 <details>
 <summary>Stream 매핑</summary>
+
+```java
+Stream<String> s1 = Stream.of("a1", "b1", "b1", "c1", "c2", "c3");
+Stream<String> s2 = s1.map(String::toUpperCase);
+```
 
 </details>
 
 <details>
 <summary>Stream 매칭과 검색</summary>
 
+```java
+// 매칭. allMatch
+if(Nation.nations.stream().allMatch(d->d.getPopulation()>100.0)){
+  System.out.println("모든 국가의 인구가 1억이 넘는다");
+} else {
+  System.out.println("모든 국가의 인구가 1억이 넘지는 않는다.");
+}
+
+// 검색
+Optional<Nation> any = Nation.nations.stream().filter(Nation::isIsland).findAny();
+```
+
 </details>
 
 <details>
 <summary>Stream 단순집계</summary>
 
+```java
+IntStream intStream2 = IntStream.of(5, 1, 2, 3);
+System.out.println(intStream2.count());
+```
+
 </details>
 
 <details>
-<summary>Stream filtering, Collector</summary>
+<summary>Stream filtering</summary>
+
+- filter와 함께 사용하는 메서드 : skip(), distinct(), limit()
 
 </details>
 
 <details>
-<summary>Stream Grouping, partitioning</summary>
+<summary>Stream Collectors Grouping, partitioning</summary>
 
+```java
+// 기준에 따른 Group 만들기
+Stream<Nation> s1 = Nation.nations.stream();
+List<String> slist = s1.map(Nation::getName).collect(Collectors.toList());
+Map<Nation.Type, Long> collect1 = s2.collect(Collectors.groupingBy(Nation::getType, Collectors.counting()));
+
+// 이분법으로 나누기
+Stream<Nation> sn = Nation.nations.stream();
+Map<Boolean, Long> collect = sn.collect(Collectors.partitioningBy(
+    n -> n.getType() == Nation.Type.LAND,
+    Collectors.counting()
+));
+```
 </details>
 
 <details>
 <summary>Optional 타입</summary>
+
+```java
+Optional<String> s = Optional.of("apple");
+Util.print(s);
+System.out.println(Optional.ofNullable(null));
+System.out.println(Optional.ofNullable(null).orElse("null"));
+```
 
 </details>
 
@@ -483,6 +638,7 @@ Stream<T> = Stream.of(배열)
 
 - 배열의 원리 : overflow가 발생하면 배열의 크기를 2배 증가시킨다.
 - 배열이 1/4 남아있다면 크기를 1/2로 줄인다.
+
 </details>
 
 ### 240322
@@ -514,22 +670,70 @@ Stream<T> = Stream.of(배열)
 <details>
 <summary>read(), write() 메소드로 입력 및 출력</summary>
 
-- 
+```java
+// 바이트 단위의 이진 데이터를 다루므로 이미지나 동영상 파일을 처리할 때 유용
+int read=System.in.read();
+System.out.write(read);
+```
 
 </details>
 
 <details>
 <summary>FileStream 클래스. 모든 파일을 읽고 쓸 수 있음</summary>
 
+```java
+String input = "C:\\Temp\\org.txt";
+String output = "C:\\Temp\\target.txt";
+int read;
+try {
+  FileInputStream fis = new FileInputStream(input);
+  FileOutputStream fos = new FileOutputStream(output);
+  while((read = fis.read()) != -1){
+    fos.write(read);
+  }
+} catch (FileNotFoundException e) {
+  System.out.println("해당 파일을 찾을 수 없습니다");
+} catch (IOException e){
+  throw new RuntimeException(e);
+}
+```
+
 </details>
 
 <details>
 <summary>Thread 상속</summary>
 
+- 객체에 Thread를 상속받아서 Thread 제어 메서드를 사용할 수 있다.
+
 </details>
 
 <details>
 <summary>Socket 클래스로 Client, server 구현</summary>
+
+```java
+// Client
+try {
+Socket client = new Socket("localhost", 5000);
+OutputStream os = client.getOutputStream();
+ObjectOutputStream oos = new ObjectOutputStream(os);
+  oos.writeObject("안녕, 단순 서버야");
+  oos.flush();
+} catch (Exception e) {
+};
+
+// Server
+try {
+ServerSocket server = new ServerSocket(5000);
+Socket connection = server.accept();
+InputStream is = connection.getInputStream();
+ObjectInputStream ois = new ObjectInputStream(is);
+String s = (String) ois.readObject();
+System.out.println("받은 문자열 : "+s);
+} catch (Exception e) {
+
+}
+
+```
 
 </details>
 
@@ -537,18 +741,26 @@ Stream<T> = Stream.of(배열)
 <summary>jdbc로 Mysql DB에 연결</summary>
 
 **과정 순서**
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-
-
+- intellij에 MySQL 드라이버 설정
+  - file - project structure - libraries - mysql-connector-java. choose module
 ```java
+// JDBC드라이버 로드 및 데이터베이스 연결
 Class.forName("com.mysql.cj.jdbc.Driver");
+
+// 데이터베이스와 연결해 Connection 객체 생성
+String url = "jdbc:mysql://localhost/foodcon?serverTimezone=Asia/Seoul";
 connect = DriverManager.getConnection(url, "root", "password");
+
+// SQL 문 실행
+// sql 작성
+String sql = "delete from mytable where id=?;";
+// statement 객체 생성 -> set 메서드를 이용해서 변수값을 설정
+PreparedStatement ps = con.prepareStatement(sql);
+// statement 객체. executeQuery/executeUpdate 를 사용해서 query 실행
+ps.setInt(1,3);
+ps.executeUpdate();
+ps.close();
+con.close();
 ```
 
 </details>
@@ -556,12 +768,33 @@ connect = DriverManager.getConnection(url, "root", "password");
 <details>
 <summary>Mysql DB에 값 추가(insert into)</summary>
 
+```java
+String sql = "insert into checkout values ...;";
+PreparedStatement statement = con.prepareStatement(sql);
+statement.setInt(1,value);
+statement.executeUpdate();
+statement.close();
+con.close();
+```
+  
 </details>
 
 <details>
 <summary>Mysql DB 가져오기(select)</summary>
 
-- 
+```java
+String sql = "select id from checkout;";
+PreparedStatement ps = con.prepareStatement(sql);
+ResultSet rs = ps.executeQuery();
+List<Checkout> checkoutList = new LinkedList<>();
+if (rs != null){
+    while(rs.next()){
+      Checkout checkout = new Checkout(rs.getInt(1));
+      checkoutList.add(checkout);
+    };
+    return checkoutList;
+}
+```
 
 </details>
 
@@ -627,5 +860,7 @@ connect = DriverManager.getConnection(url, "root", "password");
 
 <details>
 <summary>대출관리 DAO 및 유저 인터페이스 작성</summary>
+
+- 임의의 객체를 생성해 TDD 방식으로 프로그램을 검증 할 수 있다.
 
 </details>
